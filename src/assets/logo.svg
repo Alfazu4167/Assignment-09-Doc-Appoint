@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#134E4A"/>
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0FDFA"/>
+      <stop offset="100%" stop-color="#A7F3D0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Stethoscope -->
+  <g fill="none" stroke="url(#steelGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left ear tube -->
+    <path d="M170 110 V190 C170 240 210 270 256 270 C302 270 342 240 342 190 V110"/>
+    <!-- Ear tips -->
+    <circle cx="170" cy="100" r="16" fill="url(#steelGrad)" stroke="none"/>
+    <circle cx="342" cy="100" r="16" fill="url(#steelGrad)" stroke="none"/>
+    <!-- Tube down to chest piece -->
+    <path d="M256 270 V330 C256 365 280 385 318 385 C350 385 372 362 372 332 V312"/>
+  </g>
+
+  <!-- Chest piece (diaphragm) -->
+  <circle cx="372" cy="332" r="46" fill="none" stroke="url(#steelGrad)" stroke-width="18"/>
+  <circle cx="372" cy="332" r="20" fill="#A7F3D0"/>
+
+  <!-- Pulse line accent -->
+  <path d="M96 396 H176 L196 356 L226 436 L256 376 L276 396 H320"
+        fill="none" stroke="#5EEAD4" stroke-width="14"
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>
