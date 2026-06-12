@@ -51,7 +51,7 @@ export default function Navbar() {
                     </button>
                     <div className="flex gap-3 items-center">
                         <Image src={logo} alt="Doc Appoint" height={50} width={50} />
-                        <h2 className="text-2xl font-bold hidden md:block">Doc <span className="text-[#70D5BB]">Appoint</span></h2>
+                        <h2 className="text-2xl font-bold hidden md:block">Doc <span className="text-[#14B8A6]">Appoint</span></h2>
                     </div>
                 </div>
                 <ul className="hidden items-center gap-4 md:flex">
@@ -60,7 +60,7 @@ export default function Navbar() {
                 </ul>
 
                 <div>
-                    <Button className={'rounded-[5px]'}>Register</Button>
+                    <Button className={'rounded-[5px] bg-[#14B8A6]'}>Register</Button>
                 </div>
             </header>
             {isMenuOpen && (
