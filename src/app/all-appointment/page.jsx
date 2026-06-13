@@ -6,8 +6,8 @@ const AllAppointmentPage =async () => {
     const doctors = await getDoctorsData()
     console.log(doctors);
     return (
-        <div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
+        <div className='container mx-auto'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-15'>
                 {
                     doctors.map(doctor=><DoctorsCard key={doctor._id} doctor={doctor}></DoctorsCard>)
                 }
