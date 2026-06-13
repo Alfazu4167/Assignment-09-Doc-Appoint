@@ -15,9 +15,9 @@ const DoctorDetails = async ({ params }) => {
 
     return (
         <div className='container mx-auto'>
-            <div className='mt-10 shadow-xl rounded-md flex gap-4 max-w-3/4 mx-auto p-3'>
+            <div className='mt-10 shadow-xl rounded-md flex flex-col lg:flex-row gap-4 max-w-3/4 mx-auto p-3'>
                 <div className='border-2 border-[#14B8A6] rounded-md space-y-3 p-2 ' >
-                    <Image src={image} alt={name} height={400} width={400} className=' max-w-80 rounded-md' />
+                    <Image src={image} alt={name} height={400} width={400} className=' max-w-80 rounded-md mx-auto' />
                 </div>
                 <div className='space-y-3'>
                     <h2 className='text-3xl font-bold '>{name}</h2>
@@ -26,7 +26,7 @@ const DoctorDetails = async ({ params }) => {
                     <br />
                     <Chip className='rounded-[5px]'><span className='text-yellow-500'> <FaStar /></span> {rating}/ <span className='text-muted'>5.00</span></Chip>
                     <p className='max-w-90 text-muted'>{description}</p>
-                    <div className='grid grid-cols-2 gap-4 items-center'>
+                    <div className='grid md:grid-cols-2 gap-4 items-center'>
                         <div className='p-2 shadow-xl rounded-md border  flex gap-3 items-center'>
                             <div className='p-2 rounded-full bg-[#5eeedd3b]'>
                                 <CiClock2 className='text-[#14B8A6] text-xl' />
