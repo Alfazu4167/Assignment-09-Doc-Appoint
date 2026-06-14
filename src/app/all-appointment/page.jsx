@@ -1,5 +1,5 @@
 import React from 'react';
-import { getDoctorsData } from '../lib/data';
+import { getDoctorsData } from '../../lib/data';
 import DoctorsCard from '@/Components/DoctorsCard';
 
 const AllAppointmentPage =async () => {

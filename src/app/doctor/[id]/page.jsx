@@ -1,4 +1,4 @@
-import { getDoctorsDataById } from '@/app/lib/data';
+import { getDoctorsDataById } from '@/lib/data';
 import AppointmentBookingModal from '@/Components/AppointmentBookingModal';
 import { Card, Chip } from '@heroui/react';
 import Image from 'next/image';

@@ -1,12 +1,15 @@
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+const dns = require("node:dns");
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+
+import {  Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
-import Banner from "@/Components/Banner";
+import { Toaster } from "react-hot-toast";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,7 +22,10 @@ export const metadata = {
   description: "Appoint best doctor for your Disease",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await auth.api.getSession({
+    headers: await headers() // you need to pass the headers object.
+})
   return (
     <html
       lang="en"
@@ -27,8 +33,10 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning={true}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Navbar></Navbar>
-        {children}</body>
+        <Navbar session={session}></Navbar>
+        {children}
+        <Toaster/>
+        </body>
        
     </html>
   );

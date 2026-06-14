@@ -3,7 +3,11 @@ import { useState } from "react";
 import { Link, Button } from "@heroui/react";
 import Image from "next/image";
 import logo from '../assets/logo.svg'
-export default function Navbar() {
+import { authClient } from "@/lib/auth-client";
+export default function Navbar({session}) {
+    
+    console.log(session);
+    const user = session?.user;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const li = <>
         <li>
@@ -59,8 +63,9 @@ export default function Navbar() {
                     {li}
                 </ul>
 
-                <div>
-                    <Button className={'rounded-[5px] bg-[#14B8A6]'}>Register</Button>
+                <div className="flex gap-3">
+                  <Link href="/login"><Button className={'rounded-[5px] bg-[#14B8A6]'}>Login</Button></Link>
+                  <Link href="/register"><Button className={'rounded-[5px] bg-[#14B8A6]'}>Register</Button></Link>
                 </div>
             </header>
             {isMenuOpen && (
