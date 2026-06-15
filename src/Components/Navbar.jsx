@@ -13,7 +13,7 @@ export default function Navbar() {
     const user = session?.user;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
     const li = <>
         <li>
             <Link href="/">Home</Link>
@@ -65,19 +65,19 @@ export default function Navbar() {
                     </div>
                 </div>
 
-               
+
                 <ul className="hidden items-center gap-4 md:flex">
                     {li}
                 </ul>
 
-              
+
                 <div className="flex items-center">
                     {isPending ? (
                         <PulseLoader />
                     ) : user ? (
                         <div className='flex gap-3 items-center'>
                             <Avatar>
-                                <Avatar.Image alt="John Doe" src={user?.image} />
+                                <Avatar.Image alt={user?.name} src={user?.image} />
                                 <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
                             </Avatar>
                             <Button onClick={async () => await authClient.signOut()} className='rounded-[5px] bg-[#14B8A6]'>
@@ -97,7 +97,7 @@ export default function Navbar() {
                 </div>
             </header>
 
-    
+
             {isMenuOpen && (
                 <div className="border-t border-separator md:hidden">
                     <ul className="flex flex-col gap-2 p-4">

@@ -4,13 +4,13 @@
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import { ClockLoader } from 'react-spinners';
-
+import UpdateProfile from './UpdateProfile';
 
 
 const ProfilePage = () => {
     const { data: session, isPending } = authClient.useSession()
 
-   
+
     const user = session?.user;
 
     return (
@@ -23,7 +23,7 @@ const ProfilePage = () => {
                         <p className='text-gray-500 text-center '>{user?.email}</p></>
 
             }
-            {/* <UpdateProfile user={user}/> */}
+            <UpdateProfile user={user} />
         </div>
     );
 };
