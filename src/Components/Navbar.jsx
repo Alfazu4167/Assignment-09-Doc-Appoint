@@ -19,10 +19,10 @@ export default function Navbar() {
             <Link href="/">Home</Link>
         </li>
         <li>
-            <Link href="all-appointment">All Appointment</Link>
+            <Link href="/all-appointment">All Appointment</Link>
         </li>
         <li>
-            <Link href="dashboard">DashBoard</Link>
+            <Link href="/dashboard">DashBoard</Link>
         </li>
     </>
 

@@ -15,7 +15,8 @@ const DashBoardPage = async () => {
   const bookings = await res.json();
   console.log(bookings);
   return (
-    <div className=' ml-80 my-10'>
+    <div className=' 
+   mx-5 md:m-40 lg:ml-80'>
       <h2 className='text-3xl font-bold  mb-5'>DashBoard</h2>
       <Tabs className="max-w-md">
         <Tabs.ListContainer >
@@ -31,7 +32,7 @@ const DashBoardPage = async () => {
           </Tabs.List>
         </Tabs.ListContainer>
         <Tabs.Panel className="pt-4" id="bookings">
-          <div className='my-3'>
+          <div className=''>
             {bookings.map(booking => <BookingCard key={booking._id} booking={booking}></BookingCard>)}
           </div>
         </Tabs.Panel>
