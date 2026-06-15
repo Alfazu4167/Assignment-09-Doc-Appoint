@@ -1,25 +1,34 @@
 'use client'
 
-import { Button, Input, Label, Modal, Select, Surface, TextField, SelectItem, ListBox, DateField, Description, TimeField, DatePicker, Calendar, FieldError } from '@heroui/react';
+import { authClient } from '@/lib/auth-client';
+import { Button, Input, Label, Modal, Select, Surface, TextField, ListBox, FieldError } from '@heroui/react';
 
-import { useState } from 'react';
+
+
 import toast from 'react-hot-toast';
 
 
-import { BiChevronDown } from 'react-icons/bi';
-import { CgLock } from 'react-icons/cg';
 
 const AppointmentBookingModal = ({ doctor }) => {
+    const { data: session, isPending } = authClient.useSession()
+    const user = session?.user;
     const { name } = doctor;
-    // const [startDate, setStartDate] = useState(new Date());
+
     const onSubmit = async (e) => {
+
+
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        const bookingData = Object.fromEntries(formData.entries()
-        )
-        console.log(bookingData);
+
+        const formDataObj = Object.fromEntries(formData.entries());
+
+        const bookingData = {
+            ...formDataObj,
+            userId: user?.id
+        };
+
         try {
-            // ⚠️ এখানে ব্যাকটিক্স ( ` ) এবং ${} সঠিকভাবে ব্যবহার করা হয়েছে
+
             const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/bookings`, {
                 method: "POST",
                 headers: {
@@ -31,13 +40,13 @@ const AppointmentBookingModal = ({ doctor }) => {
 
             if (res.ok) {
                 const data = await res.json();
-                console.log("Success Data:", data);
+
                 toast.success('Your Appointment Booked Successfully');
             } else {
                 toast.error('Something went wrong on the server');
             }
         } catch (error) {
-                     toast.error('Network error, please try again');
+            toast.error('Network error, please try again');
         }
     }
     return (
@@ -57,7 +66,9 @@ const AppointmentBookingModal = ({ doctor }) => {
                                 <Surface variant="default">
                                     <form className="flex flex-col gap-4" onSubmit={onSubmit}>
 
-                                        <TextField className="w-full" name="userEmail" type="email" variant="secondary">
+                                        <TextField className="w-full" name="userEmail" type="email"
+                                            defaultValue={user?.email}
+                                            variant="secondary">
                                             <Label>Email</Label>
                                             <Input placeholder="Enter your email" />
                                         </TextField>
@@ -112,7 +123,9 @@ const AppointmentBookingModal = ({ doctor }) => {
 
 
                                         </div>
-                                        <TextField className="w-full" variant="secondary">
+                                        <TextField
+                                            name='reason'
+                                            className="w-full" variant="secondary">
                                             <Label>Reason (optional)</Label>
                                             <Input placeholder="Reason for visit" />
                                         </TextField>

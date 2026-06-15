@@ -4,10 +4,10 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 import {  Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/Components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
+import Navbar from "@/Components/Navbar";
 
 
 
@@ -31,9 +31,11 @@ export default async function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${poppins.variable} h-full antialiased`}
       suppressHydrationWarning={true}
+      
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Navbar session={session}></Navbar>
+        {/* <Navbar session={session}></Navbar> */}
+        <Navbar/>
         {children}
         <Toaster/>
         </body>
