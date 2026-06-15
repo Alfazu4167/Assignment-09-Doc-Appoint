@@ -1,4 +1,5 @@
 import BookingCard from '@/Components/BookingCard';
+import ProfilePage from '@/Components/ProfilePage';
 import { auth } from '@/lib/auth';
 import { getBookingData } from '@/lib/data';
 import { Tabs } from '@heroui/react';
@@ -37,7 +38,7 @@ const DashBoardPage = async () => {
           </div>
         </Tabs.Panel>
         <Tabs.Panel className="pt-4" id="profile">
-          <p>Profile</p>
+        <ProfilePage/>
         </Tabs.Panel>
       </Tabs>
     </div>

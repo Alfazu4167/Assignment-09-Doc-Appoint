@@ -1,6 +1,8 @@
 "use client";
 
 import { AlertDialog, Button } from "@heroui/react";
+import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
 
 export function DeleteAlert({ booking }) {
     const { doctorName, _id } = booking;
@@ -12,8 +14,10 @@ export function DeleteAlert({ booking }) {
             },
         })
         const data = await res.json();
-        console.log(data);
-        // window.location.reload()
+        if (data.deletedCount>0) {
+            toast.success("Your appointment deleted successfully")
+            redirect('/dashboard')
+        }
     }
     return (
         <AlertDialog>

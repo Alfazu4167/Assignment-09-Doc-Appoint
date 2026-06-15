@@ -19,7 +19,7 @@ const LoginPage = () => {
         const user = Object.fromEntries(formData.entries())
 
         const { data, error } = await authClient.signIn.email({
-           password: user.password,
+            password: user.password,
             email: user.email,
             rememberMe: true,
             callbackURL: '/'
