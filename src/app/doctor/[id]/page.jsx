@@ -74,7 +74,7 @@ const DoctorDetails = async ({ params }) => {
                         <p className='text-[20px] font-bold mt-2'>Availability</p>
                         <div className='flex gap-3'>
                             {
-                                availability.map((a, ind) => <p key={ind} className='p-2 bg-[#5eeedd1c] text-[#14B8A6] rounded-md'>
+                                availability?.map((a, ind) => <p key={ind} className='p-2 bg-[#5eeedd1c] text-[#14B8A6] rounded-md'>
                                     {a}
                                 </p>)
                             }

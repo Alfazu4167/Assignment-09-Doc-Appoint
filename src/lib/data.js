@@ -1,11 +1,24 @@
+import { headers } from "next/headers";
+import { auth } from "./auth";
+
 export const getDoctorsData = async (search = "") => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/doctors?search=${search}`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/doctors/search?name=${search}`)
     const data = await res.json();
     return data
 }
 
 export const getDoctorsDataById = async (id) => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/doctors/${id}`)
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+   console.log(token);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/doctors/${id}`,
+        {
+            headers: {
+                authorization: `Bearer ${token}`
+            }
+        }
+    )
     const data = await res.json();
     return data
 }
