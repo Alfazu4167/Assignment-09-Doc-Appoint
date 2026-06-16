@@ -1,5 +1,5 @@
 import Banner from "@/Components/Banner";
-import FeaturedSection from "@/Components/FeaturedSection";
+import FeaturedSection from "@/Components/StateSection";
 import TopRatedDoctors from "@/Components/TopRatedDoctors";
 
 export default function Home() {
