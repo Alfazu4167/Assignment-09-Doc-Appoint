@@ -7,7 +7,7 @@ const AllAppointmentPage =async () => {
     console.log(doctors);
     return (
         <div className='container mx-auto'>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-15'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-15'>
                 {
                     doctors.map(doctor=><DoctorsCard key={doctor._id} doctor={doctor}></DoctorsCard>)
                 }
