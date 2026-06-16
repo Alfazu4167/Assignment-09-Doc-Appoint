@@ -6,7 +6,7 @@ const TopRatedDoctors = async () => {
     const doctors = await getTopDoctors()
 
     return (
-        <div className='container mx-auto my-15 p-5 lg:p-0'>
+        <div className='container mx-auto mt-10 p-5 lg:p-0'>
             <h2 className='text-3xl font-bold mb-5'>Top Rated Doctors</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
