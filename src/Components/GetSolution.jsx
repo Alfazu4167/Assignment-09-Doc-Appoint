@@ -17,7 +17,7 @@ const GetSolution = () => {
                     </div>
 
                     <h2 className='text-2xl font-bold'>Find best doctor's</h2>
-                    <p className='text-muted'>Find your doctor easily with a minimum of effort. We've
+                    <p className='text-muted max-w-3xl'>Find your doctor easily with a minimum of effort. We've
                         kept everything organized for you.</p>
                 </div>
                 <div className='shadow-2xl p-5 rounded-md flex flex-col justify-center items-center'>
@@ -28,7 +28,7 @@ const GetSolution = () => {
                     </div>
 
                     <h2 className='text-2xl font-bold'>Get Appointment</h2>
-                    <p className='text-muted'>Ask for an appointment of the doctor quickly with almost a
+                    <p className='text-muted max-w-3xl'>Ask for an appointment of the doctor quickly with almost a
                         single click. We take care of the rest.</p>
                 </div>
                 <div className='shadow-2xl p-5 rounded-md flex flex-col justify-center items-center'>
@@ -39,7 +39,7 @@ const GetSolution = () => {
                     </div>
 
                     <h2 className='text-2xl font-bold'>Happy Consultations</h2>
-                    <p className='text-muted'>Do consultations and take the service based on your
+                    <p className='text-muted max-w-3xl'>Do consultations and take the service based on your
                         appointment. Get back to good health</p>
                 </div>
             </div>

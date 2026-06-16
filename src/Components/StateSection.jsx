@@ -8,7 +8,7 @@ import { BsFillStarFill } from 'react-icons/bs';
 //w-27 h-27 flex items-center justify-center rounded-full border-2 border-[#14B8A6] p-7 bg-white shadow-sm
 const FeaturedSection = () => {
     return (
-        <div className='bg-[#EEF7FF] mx-auto py-7 mt-10'>
+        <div className='bg-[#EEF7FF] mx-auto py-7 mt-20'>
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 '>
                 <div className='flex flex-col justify-center items-center my-5'>
                     <div className='w-27 h-27 flex items-center justify-center rounded-full border-2 border-[#14B8A6] p-7 bg-white shadow-sm'>

@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 
 
@@ -37,6 +38,7 @@ export default async function RootLayout({ children }) {
         {/* <Navbar session={session}></Navbar> */}
         <Navbar/>
         {children}
+        <Footer/>
         <Toaster/>
         </body>
        
