@@ -51,7 +51,7 @@ const UpdateProfile = ({ user }) => {
                                         <Label>Image Url</Label>
                                         <Input placeholder="" />
                                     </TextField>
-                                    <Button slot="close" variant="secondary" type='submit'>
+                                    <Button slot="close" type='submit' className={'bg-[#14B8A6] rounded-[10px] w-full'}>
                                         Update
                                     </Button>
                                 </form>

@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 export function DeleteAlert({ booking }) {
     const { doctorName, _id } = booking;
     const handleDelete = async (id) => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/bookings/${id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${id}`, {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json'
@@ -37,10 +37,10 @@ export function DeleteAlert({ booking }) {
                             </p>
                         </AlertDialog.Body>
                         <AlertDialog.Footer>
-                            <Button slot="close" variant="tertiary">
+                            <Button slot="close" variant="tertiary" className={'rounded-[10px]'}>
                                 Cancel
                             </Button>
-                            <Button slot="close" variant="danger" onClick={() => handleDelete(_id)}>
+                            <Button slot="close" variant="danger" onClick={() => handleDelete(_id)} className={'rounded-[10px]'}>
                                 Confirm Delete
                             </Button>
                         </AlertDialog.Footer>

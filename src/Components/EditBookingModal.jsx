@@ -15,7 +15,7 @@ const EditBookingModal = ({ booking }) => {
         const formData = new FormData(e.currentTarget);
         const updatedData = Object.fromEntries(formData.entries());
 
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/bookings/${_id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/bookings/${_id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ const EditBookingModal = ({ booking }) => {
                                             <Input placeholder="Reason for visit" />
                                         </TextField>
 
-                                        <Button slot="close" type='submit' className={'w-full bg-[#14B8A6]'}>Update</Button>
+                                        <Button slot="close" type='submit' className={'w-full bg-[#14B8A6] rounded-[10px]'}>Update</Button>
                                     </form>
                                 </Surface>
                             </Modal.Body>

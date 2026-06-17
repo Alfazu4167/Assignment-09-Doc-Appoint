@@ -36,11 +36,11 @@ const RegisterPage = () => {
             toast.error(error.message)
         }
     };
-    // const GoogleSignIn = async () => {
-    //     const data = await authClient.signIn.social({
-    //         provider: "google",
-    //     });
-    // };
+    const GoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    };
     return (
         <div className="container mx-auto my-10">
             <div className="w-1/3  shadow-2xl mx-auto p-5">
@@ -119,7 +119,7 @@ const RegisterPage = () => {
                     <Separator className="flex-1" />
                 </div>
 
-                <Button className={'rounded-[5px] w-full text-[#14B8A6] border border-[#14B8A6]'} variant="outline"><FcGoogle />
+                <Button className={'rounded-[5px] w-full text-[#14B8A6] border border-[#14B8A6]'} variant="outline" onClick={GoogleSignIn}><FcGoogle />
                     Sing in with google</Button>
                 <p className="text-sm text-right p-1 ">Already have an account?  <Link className="text-[#14B8A6] underline" href={'/login'}>Login</Link></p>
             </div>
