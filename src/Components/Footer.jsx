@@ -19,13 +19,13 @@ const Footer = () => {
                 </div>
                 <div>
                     <h2 className='text-xl font-semibold'>Social Links</h2>
-                    <div className='flex items-center gap-3 mt-3'>
-                        <span className='text-muted p-2 rounded-full bg-white shadow-md'><FaTwitter /></span>
-                        <span className='text-muted p-2 rounded-full bg-white shadow-md'><FaLinkedin /></span>
-                        <span className='text-muted p-2 rounded-full bg-white shadow-md'><FaFacebook />
-                        </span>
-                        <span className='text-muted p-2 rounded-full bg-white shadow-md'><FaInstagram /></span>
-                    </div>
+                    <ul className='flex items-center gap-3 mt-3'>
+                        
+                        <li className='text-muted p-2 rounded-full bg-white shadow-md'><a href=""><FaLinkedin /></a></li>
+                        <li className='text-muted p-2 rounded-full bg-white shadow-md'><a href=""><FaTwitter /></a></li>
+                        <li className='text-muted p-2 rounded-full bg-white shadow-md'><a href=""><FaFacebook /></a></li>
+                        <li className='text-muted p-2 rounded-full bg-white shadow-md'><a href=""><FaInstagram /></a></li>
+                    </ul>
                 </div>
             </div>
             <p className='text-muted text-center'>

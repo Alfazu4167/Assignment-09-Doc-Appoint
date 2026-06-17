@@ -7,7 +7,15 @@ import { CiClock2 } from 'react-icons/ci';
 import { FaCalendarPlus, FaClock, FaRegHospital, FaStar } from 'react-icons/fa';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { HiOutlineDocumentCurrencyBangladeshi } from 'react-icons/hi2';
+export const generateMetadata = async({params})=>{
+    const {id}= await params;
+    const doctor = await getDoctorsDataById(id);
+    return {
+    title: doctor.name,
+    description: doctor.description,
+  }
 
+}
 const DoctorDetails = async ({ params }) => {
     const { id } = await params;
     const doctor = await getDoctorsDataById(id);
@@ -80,7 +88,7 @@ const DoctorDetails = async ({ params }) => {
                             }
                         </div>
                     </div>
-                    <AppointmentBookingModal doctor={doctor}/>
+                    <AppointmentBookingModal doctor={doctor} />
 
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { Button, SearchField } from "@heroui/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { useState } from "react";
+import { FiSearch } from "react-icons/fi";
 
 
 
@@ -35,7 +36,7 @@ const SearchDoctor = () => {
                     <SearchField.ClearButton />
                 </SearchField.Group>
             </SearchField>
-            <Button variant="outline" className={'rounded-md p-5'} onClick={handleSearch}>Search</Button>
+            <Button variant="outline" className={'rounded-md p-5 border border-[#14B8A6] text-[#14B8A6]'} onClick={handleSearch}><FiSearch/>Search</Button>
         </div>
     );
 };

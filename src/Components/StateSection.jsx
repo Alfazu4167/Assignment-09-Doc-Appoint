@@ -5,7 +5,7 @@ import clock from '../assets/clock.png'
 import doctor from '../assets/doctor.png'
 import user from '../assets/active-user.png'
 import { BsFillStarFill } from 'react-icons/bs';
-//w-27 h-27 flex items-center justify-center rounded-full border-2 border-[#14B8A6] p-7 bg-white shadow-sm
+
 const FeaturedSection = () => {
     return (
         <div className='bg-[#EEF7FF] mx-auto py-7 mt-20'>

@@ -9,7 +9,10 @@ import { FcGoogle } from "react-icons/fc";
 
 import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
-
+// export const metadata = {
+//     title: "Login | Doc Appoint",
+//     description: "Appoint best doctor for your Disease",
+// };
 const LoginPage = () => {
     const { data: session, isPending } = authClient.useSession();
     console.log(session);
@@ -58,18 +61,18 @@ const LoginPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="Enter your email" />
                         <FieldError />
                     </TextField>
 
                     <TextField
                         isRequired
-                        minLength={8}
+                        minLength={6}
                         name="password"
                         type="password"
                         validate={(value) => {
-                            if (value.length < 8) {
-                                return "Password must be at least 8 characters";
+                            if (value.length < 6) {
+                                return "Password must be at least 6 characters";
                             }
                             if (!/[A-Z]/.test(value)) {
                                 return "Password must contain at least one uppercase letter";
@@ -83,7 +86,7 @@ const LoginPage = () => {
                     >
                         <Label>Password</Label>
                         <Input placeholder="Enter your password" />
-                        <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+                        <Description>Must be at least 6 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
 
@@ -102,7 +105,7 @@ const LoginPage = () => {
 
                 <Button className={'rounded-[5px] w-full text-[#14B8A6] border border-[#14B8A6]'} variant="outline"><FcGoogle />
                     Sing in with google</Button>
-                <p className="text-sm text-right p-1 ">Don't have an account?  <Link className="text-[#14B8A6] underline" href={'\register'}>Register</Link></p>
+                <p className="text-sm text-right p-1 ">Don't have an account?  <Link className="text-[#14B8A6] underline" href={'/register'}>Register</Link></p>
             </div>
         </div>
     )
