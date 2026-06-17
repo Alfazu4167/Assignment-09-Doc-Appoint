@@ -11,7 +11,7 @@ const TopRatedDoctors = async () => {
 
     return (
         <div className='container mx-auto mt-10 p-5 lg:p-0'>
-            <div className='flex justify-between items-center mb-5'>
+            <div className='flex flex-col md:flex-row justify-between items-center mb-5'>
                 <h2 className='text-3xl font-bold mb-5'>Top Rated Doctors</h2>
                 <Link href={'/all-appointment'}><Button variant='outline' className={'rounded-[10px] border border-[#14B8A6] text-[#14B8A6]'}>Show All Doctors <FaArrowRight /></Button></Link>
             </div>

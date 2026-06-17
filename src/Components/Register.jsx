@@ -39,9 +39,9 @@ const Register = () => {
         });
     };
     return (
-        <div className="w-1/3  shadow-2xl mx-auto p-5">
+        <div className="max-w-96 shadow-2xl mx-auto p-5">
             <h2 className="text-4xl font-bold text-center">Register</h2>
-            <Form className="flex w-96 flex-col gap-4 mx-auto my-3" onSubmit={onSubmit}>
+            <Form className="flex max-w-96 flex-col gap-4 mx-auto my-3" onSubmit={onSubmit}>
                 <TextField
                     isRequired
                     name="name"
@@ -51,14 +51,7 @@ const Register = () => {
                     <Input placeholder="Enter your name" />
                     <FieldError />
                 </TextField>
-                <TextField
-                    name="image"
-                    type="url"
-                >
-                    <Label>Photo Url</Label>
-                    <Input placeholder="image url" />
-                    <FieldError />
-                </TextField>
+
                 <TextField
                     isRequired
                     name="email"
@@ -75,7 +68,14 @@ const Register = () => {
                     <Input placeholder="john@example.com" />
                     <FieldError />
                 </TextField>
-
+                <TextField
+                    name="image"
+                    type="url"
+                >
+                    <Label>Photo Url</Label>
+                    <Input placeholder="image url" />
+                    <FieldError />
+                </TextField>
                 <TextField
                     isRequired
                     minLength={6}

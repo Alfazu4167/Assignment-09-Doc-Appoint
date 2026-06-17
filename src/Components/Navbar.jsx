@@ -60,7 +60,7 @@ export default function Navbar() {
                         </svg>
                     </button>
                     <div className="flex gap-3 items-center">
-                        <Image src={logo} alt="Doc Appoint" height={50} width={50} referrerPolicy='no-referrer'/>
+                        <Link href="/"><Image src={logo} alt="Doc Appoint" height={50} width={50} referrerPolicy='no-referrer'/></Link>
                         <h2 className="text-2xl font-bold hidden md:block">Doc <span className="text-[#14B8A6]">Appoint</span></h2>
                     </div>
                 </div>

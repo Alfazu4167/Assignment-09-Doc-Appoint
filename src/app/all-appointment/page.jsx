@@ -11,9 +11,9 @@ const AllAppointmentPage = async ({ searchParams }) => {
     const sp = await searchParams;
     console.log(sp);
     const doctors = await getDoctorsData(sp.search)
-    console.log(doctors);
+
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto p-5'>
             <div className='mt-10 text-center'>
                 <h2 className='text-3xl font-bold'>All Appointment</h2>
                 <p className='text-muted'>Find best doctor's for your consultation</p>

@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className='bg-[#47b3a262] mt-10 p-10 min-h-[40vh]'>
+        <div className='bg-[#47b3a262] p-10 min-h-[40vh]'>
             <div className='flex flex-col lg:flex-row justify-between gap-5'>
                 <div className="flex gap-3 items-center">
                     <Image src={logo} alt="Doc Appoint" height={50} width={50} />

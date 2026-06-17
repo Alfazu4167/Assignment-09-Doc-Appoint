@@ -6,7 +6,7 @@ import { Card } from '@heroui/react';
 
 const GetSolution = () => {
     return (
-        <div className='container mx-auto mt-10'>
+        <div className='container mx-auto mt-10 p-5'>
             <h2 className='text-3xl font-bold text-center mb-5'>3 Easy Steps and Get Your Solution</h2>
             <div className='grid lg:grid-cols-3 gap-x-10'>
                 <div className='shadow-2xl p-5 rounded-md flex flex-col justify-center items-center'>

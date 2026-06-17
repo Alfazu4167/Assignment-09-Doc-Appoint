@@ -24,8 +24,8 @@ const DoctorDetails = async ({ params }) => {
     return (
         <div className='container mx-auto'>
             <div className='mt-10 shadow-xl rounded-md flex flex-col lg:flex-row gap-4 max-w-3/4 mx-auto p-3'>
-                <div className='border-2 border-[#14B8A6] rounded-md space-y-3 p-2 ' >
-                    <Image src={image} alt={name} height={400} width={400} className=' max-w-80 rounded-md mx-auto' />
+                <div className='border-2 border-[#14B8A6] rounded-md space-y-3 p-2 max-w-90' >
+                    <Image src={image} alt={name} height={400} width={400} className='  rounded-md mx-auto' />
                 </div>
                 <div className='space-y-3'>
                     <h2 className='text-3xl font-bold '>{name}</h2>

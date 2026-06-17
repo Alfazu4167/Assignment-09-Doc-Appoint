@@ -39,9 +39,9 @@ const Login = () => {
         });
     };
     return (
-        <div className="w-1/3  shadow-2xl mx-auto p-5 min-h-[60vh]">
+        <div className="max-w-96 shadow-2xl mx-auto p-5 min-h-[60vh]">
             <h2 className="text-4xl font-bold text-center">Login</h2>
-            <Form className="flex w-96 flex-col gap-4 mx-auto my-3" onSubmit={onSubmit}>
+            <Form className="flex max-w-96 flex-col gap-4 mx-auto my-3" onSubmit={onSubmit}>
                 <TextField
                     isRequired
                     name="email"
