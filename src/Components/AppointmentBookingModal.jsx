@@ -129,7 +129,7 @@ const AppointmentBookingModal = ({ doctor }) => {
                                             <Label>Reason (optional)</Label>
                                             <Input placeholder="Reason for visit" />
                                         </TextField>
-                                        <Button slot="close" type='submit' className={'w-full bg-[#14B8A6]'}>Confirm Booking</Button>
+                                        <Button slot="close" type='submit' className={'w-full bg-[#14B8A6] rounded-[10px]'}>Confirm Booking</Button>
                                     </form>
                                 </Surface>
                             </Modal.Body>

@@ -18,10 +18,9 @@ const poppins = Poppins({
   variable: '--font-poppins', 
 });
 
-export const metadata = {
-  title: "Home | Doc Appoint",
-  description: "Appoint best doctor for your Disease",
-};
+
+
+
 
 export default async function RootLayout({ children }) {
   const session = await auth.api.getSession({
